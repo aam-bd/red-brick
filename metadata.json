@@ -1,0 +1,6 @@
+{
+  "name": "Red Brick - Luxury Collectible",
+  "description": "An ultra-premium exhibition presenting the plain red brick as a high-end museum-quality luxury collectible with meticulous storytelling and fluid micro-interactions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

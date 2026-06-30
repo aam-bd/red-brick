@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-luxury-emerald-950: #041611;
+  --color-luxury-emerald-900: #06211a;
+  --color-luxury-emerald-800: #0b3d30;
+  --color-luxury-gold: #B8860B;
+  --color-luxury-gold-light: #dfa824;
+  --color-luxury-bronze: #8E5E30;
+  --color-luxury-crimson: #800000;
+  --color-luxury-offwhite: #FAF9F6;
+  --color-luxury-charcoal: #050d0a;
+}
+
+/* Base custom resets & styles matching Artistic Flair */
+html, body {
+  background-color: var(--color-luxury-emerald-950);
+  color: var(--color-luxury-offwhite);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Customized Tailored Stripes and Luxury Museum Gradients from Artistic Flair */
+.tailored-bg {
+  position: relative;
+  background: linear-gradient(90deg, #041611 0%, #06211a 50%, #041611 100%);
+  z-index: 1;
+}
+
+.tailored-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 30%, transparent 20%, rgba(0, 0, 0, 0.75) 85%);
+  z-index: 1;
+}
+
+/* Vignette layer from Artistic Flair */
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 20%, rgba(0,0,0,0.6) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Spotlight layer from Artistic Flair */
+.spotlight {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 800px;
+  background: radial-gradient(ellipse at center, rgba(184, 134, 11, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tailored-stripes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 79px,
+    rgba(255, 255, 255, 0.03) 79px,
+    rgba(255, 255, 255, 0.03) 80px
+  );
+  z-index: 0;
+  opacity: 0.9;
+}
+
+/* Custom premium scrollbar matching theme colors */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #041611;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(184, 134, 11, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(184, 134, 11, 0.4);
+}
+
+/* Magnetic effect & custom active cursor indicators */
+.cursor-interactive {
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.cursor-interactive:hover {
+  transform: scale(1.05);
+}
+
+/* Custom vignette shadow for museum objects */
+.museum-vignette {
+  box-shadow: inset 0 0 100px rgba(0,0,0,0.9);
+}
+
+/* Pedestal glassmorphism style from Artistic Flair */
+.pedestal-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(184, 134, 11, 0.2);
+}
+
+/* Solidus crimson brick gradient styling */
+.brick-artistic {
+  background-color: var(--color-luxury-crimson);
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.05) 100%);
+  box-shadow: inset -5px -5px 15px rgba(0, 0, 0, 0.4), inset 5px 5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
