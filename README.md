@@ -2,6 +2,11 @@
 
 Red Brick is an immersive, museum-style web experience that reimagines a simple red brick as a luxury collectible. The project combines cinematic storytelling, motion-driven interactions, and premium visual design into a polished single-page experience.
 
+## Live Link
+```text
+https://red-brick.vercel.app/
+```
+
 ## Overview
 
 This app presents a curated exhibition journey with:
